@@ -1,0 +1,3 @@
+{
+  "extends": ["@fellipeutaka/eslint-config/react"]
+}

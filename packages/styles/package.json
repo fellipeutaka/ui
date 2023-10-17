@@ -1,0 +1,42 @@
+{
+  "name": "@fellipeutaka/styles",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./theme.css": "./dist/theme.css"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup src/index.ts --watch",
+    "lint": "eslint src",
+    "types:check": "tsc",
+    "clean": "rimraf .turbo node_modules dist"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwind-variants": "^0.1.14",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@fellipeutaka/tsconfig": "workspace:*",
+    "@types/node": "^20.8.6",
+    "tailwindcss": "^3.3.3",
+    "tsup": "^7.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
