@@ -1,8 +1,9 @@
+import deepMerge from "deepmerge";
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 
-export const config = {
-  content: [],
+export const defaultTailwindConfig = {
+  content: ["node_modules/@fellipeutaka/ui/dist/**/*.js"],
   darkMode: ["class"],
   theme: {
     container: {
@@ -71,3 +72,18 @@ export const config = {
   },
   plugins: [animate],
 } satisfies Config;
+
+/**
+ * Define TailwindCSS Config
+ * @param {object} config - Tailwind config object
+ * @return {object} new config object
+ */
+export function defineTailwindConfig(config: Config): Config {
+  return deepMerge(config, defaultTailwindConfig, {
+    arrayMerge(target, source) {
+      return target.concat(source).reduce((acc, cur) => {
+        return acc.includes(cur) ? acc : [...acc, cur];
+      }, []);
+    },
+  });
+}

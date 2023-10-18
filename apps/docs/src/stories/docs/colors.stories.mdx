@@ -1,66 +1,68 @@
 import { Meta, Story } from "@storybook/blocks";
+import { ThemeColor } from "~/components/ThemeColor";
 
 <Meta title="Docs/Colors" />
 
-<Story name="Docs/Colors">
-<h1 className="text-4xl font-semibold mb-4">Dark</h1>
+<Story name="Default" >
+<ThemeColor
+  variable="background"
+  className="bg-background text-foreground border border-border"
+/>
+<ThemeColor variable="foreground" className="bg-foreground text-background" />
 
-<div className="w-full bg-background text-foreground border border-border p-8">
-  background: 0 0% 100%;
-</div>
-<div className="w-full bg-foreground text-background p-8">
-  foreground: 222.2 47.4% 11.2%;
-</div>
+<ThemeColor variable="muted" className="bg-muted text-muted-foreground" />
+<ThemeColor
+  variable="muted-foreground"
+  className="bg-muted-foreground text-muted"
+/>
 
-<div className="w-full bg-muted text-muted-foreground p-8">
-  muted: 210 40% 96.1%;
-</div>
-<div className="w-full bg-muted-foreground text-muted p-8">
-  muted-foreground: 215.4 16.3% 46.9%;
-</div>
+<ThemeColor variable="popover" className="bg-popover text-popover-foreground" />
+<ThemeColor
+  variable="popover-foreground"
+  className="bg-popover-foreground text-popover"
+/>
 
-<div className="w-full bg-popover text-popover-foreground p-8">
-  popover: 0 0% 100%;
-</div>
-<div className="w-full bg-popover-foreground text-popover p-8">
-  popover-foreground: 222.2 47.4% 11.2%;
-</div>
+<ThemeColor variable="border" className="bg-border" />
+<ThemeColor variable="input" className="bg-input" />
 
-<div className="w-full bg-border p-8">border: 214.3 31.8% 91.4%;</div>
-<div className="w-full bg-input p-8">input: 214.3 31.8% 91.4%;</div>
+<ThemeColor variable="card" className="bg-card text-card-foreground" />
+<ThemeColor
+  variable="card-foreground"
+  className="bg-card-foreground text-card"
+/>
 
-<div className="w-full bg-card text-card-foreground p-8">card: 0 0% 100%;</div>
-<div className="w-full bg-card-foreground text-card p-8">
-  card-foreground: 222.2 47.4% 11.2%;
-</div>
+<ThemeColor variable="primary" className="bg-primary text-primary-foreground" />
+<ThemeColor
+  variable="primary-foreground"
+  className="bg-primary-foreground text-primary"
+/>
 
-<div className="w-full bg-primary text-primary-foreground p-8">
-  primary: 222.2 47.4% 11.2%;
-</div>
-<div className="w-full bg-primary-foreground text-primary p-8">
-  primary-foreground: 210 40% 98%;
-</div>
+<ThemeColor
+  variable="secondary"
+  className="bg-secondary text-secondary-foreground"
+/>
+<ThemeColor
+  variable="secondary-foreground"
+  className="bg-secondary-foreground text-secondary"
+/>
 
-<div className="w-full bg-secondary text-secondary-foreground p-8">
-  secondary: 210 40% 96.1%;
-</div>
-<div className="w-full bg-secondary-foreground text-secondary p-8">
-  secondary-foreground: 222.2 47.4% 11.2%;
-</div>
+<ThemeColor variable="accent" className="bg-accent text-accent-foreground" />
+<ThemeColor
+  variable="accent-foreground"
+  className="bg-accent-foreground text-accent"
+/>
 
-<div className="w-full bg-accent text-accent-foreground p-8">
-  accent: 210 40% 96.1%;
-</div>
-<div className="w-full bg-accent-foreground text-accent p-8">
-  accent-foreground: 222.2 47.4% 11.2%;
-</div>
+<ThemeColor
+  variable="destructive"
+  className="bg-destructive text-destructive-foreground"
+/>
+<ThemeColor
+  variable="destructive-foreground"
+  className="bg-destructive-foreground text-destructive"
+/>
 
-<div className="w-full bg-destructive text-destructive-foreground p-8">
-  destructive: 0 100% 50%;
-</div>
-<div className="w-full bg-destructive-foreground text-destructive p-8">
-  destructive-foreground: 210 40% 98%;
-</div>
-
-<div className="w-full bg-ring p-8">ring: 215 20.2% 65.1%;</div>
+<ThemeColor
+  variable="ring"
+  className="bg-ring"
+/>
 </Story>

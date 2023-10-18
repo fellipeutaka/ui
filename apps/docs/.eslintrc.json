@@ -1,3 +1,6 @@
 {
-  "extends": ["@fellipeutaka/eslint-config/react"]
+  "extends": [
+    "@fellipeutaka/eslint-config/react",
+    "plugin:storybook/recommended"
+  ]
 }

@@ -15,7 +15,24 @@ const meta: Meta<ButtonProps> = {
     size: "default",
   },
   argTypes: {
-    onClick: { action: "onClick" },
+    onClick: {
+      action: "onClick",
+      table: {
+        disable: true,
+      },
+    },
+    onFocus: {
+      action: "onFocus",
+      table: {
+        disable: true,
+      },
+    },
+    onMouseOver: {
+      action: "onMouseOver",
+      table: {
+        disable: true,
+      },
+    },
     type: {
       control: { type: "inline-radio" },
       options: ["button", "submit", "reset"],
