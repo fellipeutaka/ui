@@ -37,7 +37,6 @@ pnpm i lucide-react
 Import `theme.css` file at your `globals.css`.
 
 ```css
-// layout.tsx
 @import "@fellipeutaka/styles/theme.css" layer(theme);
 
 @tailwind base;
