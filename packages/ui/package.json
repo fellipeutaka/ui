@@ -1,11 +1,21 @@
 {
   "name": "@fellipeutaka/ui",
   "version": "0.1.0",
+  "description": "An accessible and customizable component library powered by shadcn/ui",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fellipeutaka/ui",
+    "directory": "packages/ui"
+  },
+  "bugs": {
+    "url": "https://github.com/fellipeutaka/ui/issues"
+  },
+  "homepage": "https://fellipeutaka-ui.vercel.app",
   "files": [
     "dist/**"
   ],

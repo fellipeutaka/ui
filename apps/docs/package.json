@@ -2,8 +2,8 @@
   "name": "@fellipeutaka/docs",
   "private": true,
   "scripts": {
-    "dev": "storybook dev -p 6006",
-    "build": "storybook build --docs",
+    "dev": "storybook dev -p 6006 --no-open",
+    "build": "storybook build",
     "preview-storybook": "serve storybook-static",
     "clean": "rimraf .turbo storybook-static node_modules",
     "lint": "eslint src"

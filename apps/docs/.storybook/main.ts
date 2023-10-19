@@ -1,5 +1,6 @@
 import { dirname, join } from "node:path";
 import type { StorybookConfig } from "@storybook/react-vite";
+import { mergeConfig } from "vite";
 
 const config: StorybookConfig = {
   stories: ["../src/stories/**/*.stories.{tsx,mdx}"],
@@ -19,17 +20,14 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true,
   },
-  async viteFinal(config, options) {
-    return {
-      ...config,
+  async viteFinal(config) {
+    return mergeConfig(config, {
       resolve: {
-        ...config.resolve,
         alias: {
-          ...(config.resolve?.alias || {}),
           "~": join(__dirname, "..", "src"),
         },
       },
-    };
+    });
   },
 };
 
