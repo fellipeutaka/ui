@@ -60,49 +60,42 @@ export default meta;
 type Story = StoryObj<ButtonProps>;
 
 export const Primary: Story = {
-  name: "Primary",
   args: {
     variant: "default",
   },
 };
 
 export const Secondary: Story = {
-  name: "Secondary",
   args: {
     variant: "secondary",
   },
 };
 
 export const Outline: Story = {
-  name: "Outline",
   args: {
     variant: "outline",
   },
 };
 
 export const Link: Story = {
-  name: "Link",
   args: {
     variant: "link",
   },
 };
 
 export const Ghost: Story = {
-  name: "Ghost",
   args: {
     variant: "ghost",
   },
 };
 
 export const Destructive: Story = {
-  name: "Destructive",
   args: {
     variant: "destructive",
   },
 };
 
 export const Icon: Story = {
-  name: "Icon",
   render(props) {
     return (
       <Button {...props}>

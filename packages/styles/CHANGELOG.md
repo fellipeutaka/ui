@@ -1,5 +1,11 @@
 # @fellipeutaka/styles
 
+## 1.1.0
+
+### Minor Changes
+
+- improve defineTailwindConfig performance using @fastify/deepmerge instead of deepmerge
+
 ## 1.0.0
 
 ### Major Changes

@@ -1,4 +1,4 @@
-import deepMerge from "deepmerge";
+import { deepmerge } from "@fastify/deepmerge";
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 
@@ -75,15 +75,11 @@ export const defaultTailwindConfig = {
 
 /**
  * Define TailwindCSS Config
- * @param {object} config - Tailwind config object
- * @return {object} new config object
+ * @param config - Tailwind config object
+ * @return new config object
  */
-export function defineTailwindConfig(config: Config): Config {
-  return deepMerge(config, defaultTailwindConfig, {
-    arrayMerge(target, source) {
-      return target.concat(source).reduce((acc, cur) => {
-        return acc.includes(cur) ? acc : [...acc, cur];
-      }, []);
-    },
-  });
+export function defineTailwindConfig(config: Config) {
+  return deepmerge({
+    all: true,
+  })(config, defaultTailwindConfig) as Config;
 }
