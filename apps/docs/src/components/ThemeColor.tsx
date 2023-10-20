@@ -8,7 +8,7 @@ type ThemeColorProps = React.ComponentPropsWithoutRef<"div"> & {
 
 function getCSSColor(color: string) {
   return getComputedStyle(document.documentElement).getPropertyValue(
-    `--${color}`
+    `--${color}`,
   );
 }
 

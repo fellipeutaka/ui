@@ -28,12 +28,6 @@ module.exports = defineTailwindConfig({
 });
 ```
 
-Install Lucide Icons.
-
-```bash
-pnpm i lucide-react
-```
-
 Import `theme.css` file at your `globals.css`.
 
 ```css
@@ -159,5 +153,21 @@ Or, if you want to customize it...
   ::-moz-focus-inner {
     padding: 0;
   }
+}
+```
+
+Install the components and Lucide Icons for the icons.
+
+```bash
+pnpm i @fellipeutaka/ui lucide-react
+```
+
+Great! Now, just use it.
+
+```jsx
+import { Button } from "@fellipeutaka/ui";
+
+export function App() {
+  return <Button>Hello World!</Button>;
 }
 ```
