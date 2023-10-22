@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from "@fellipeutaka/ui";
+import { Button, type ButtonProps } from "@fellipeutaka/ui/button";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Plus } from "lucide-react";
 

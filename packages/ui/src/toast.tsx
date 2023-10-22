@@ -1,3 +1,5 @@
+"use client";
+
 import { Toaster as ToasterPrimitive } from "sonner";
 
 export type ToasterProps = React.ComponentProps<typeof ToasterPrimitive>;

@@ -31,7 +31,7 @@ module.exports = defineTailwindConfig({
 Import `theme.css` file at your `globals.css`.
 
 ```css
-@import "@fellipeutaka/styles/theme.css" layer(theme);
+@import "@fellipeutaka/styles/theme.css";
 
 @tailwind base;
 @tailwind components;
@@ -165,7 +165,7 @@ pnpm i @fellipeutaka/ui lucide-react
 Great! Now, just use it.
 
 ```jsx
-import { Button } from "@fellipeutaka/ui";
+import { Button } from "@fellipeutaka/ui/button";
 
 export function App() {
   return <Button>Hello World!</Button>;

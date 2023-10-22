@@ -4,5 +4,13 @@
       "mode": "auto"
     }
   ],
-  "cSpell.words": ["clsx", "deepmerge", "lucide", "shadcn", "treeshake", "tsup"]
+  "cSpell.words": [
+    "clsx",
+    "deepmerge",
+    "lucide",
+    "shadcn",
+    "sonner",
+    "treeshake",
+    "tsup"
+  ]
 }

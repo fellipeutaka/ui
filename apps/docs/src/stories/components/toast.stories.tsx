@@ -1,4 +1,5 @@
-import { Toaster, toast, type ToasterProps, Button } from "@fellipeutaka/ui";
+import { Button } from "@fellipeutaka/ui/button";
+import { Toaster, toast, type ToasterProps } from "@fellipeutaka/ui/toast";
 import type { Meta, StoryObj } from "@storybook/react";
 
 type ToasterStoryProps = ToasterProps & {
