@@ -27,6 +27,11 @@
       "require": "./dist/dialog.js",
       "types": "./dist/dialog.d.ts"
     },
+    "./label": {
+      "import": "./dist/label.mjs",
+      "require": "./dist/label.js",
+      "types": "./dist/label.d.ts"
+    },
     "./text": {
       "import": "./dist/text.mjs",
       "require": "./dist/text.js",
@@ -46,6 +51,7 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
     "sonner": "^1.0.3"
   },
