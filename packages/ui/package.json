@@ -29,6 +29,11 @@
     "shadcn"
   ],
   "exports": {
+    "./badge": {
+      "import": "./dist/badge.mjs",
+      "require": "./dist/badge.js",
+      "types": "./dist/badge.d.ts"
+    },
     "./button": {
       "import": "./dist/button.mjs",
       "require": "./dist/button.js",
