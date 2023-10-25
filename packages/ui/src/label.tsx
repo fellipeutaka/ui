@@ -6,16 +6,18 @@ import { Root } from "@radix-ui/react-label";
 
 import { TextStyles } from "./text";
 
-const Label = forwardRef<
-  React.ElementRef<typeof Root>,
-  React.ComponentPropsWithoutRef<typeof Root>
->(({ className, ...props }, ref) => (
-  <Root
-    ref={ref}
-    className={TextStyles({ className, variant: "label" })}
-    {...props}
-  />
-));
-Label.displayName = "Label";
+export type LabelProps = React.ComponentPropsWithoutRef<typeof Root> & {
+  htmlFor: string;
+};
 
-export { Label };
+export const Label = forwardRef<React.ElementRef<typeof Root>, LabelProps>(
+  ({ className, htmlFor, ...props }, ref) => (
+    <Root
+      ref={ref}
+      className={TextStyles({ className, variant: "label" })}
+      htmlFor={htmlFor}
+      {...props}
+    />
+  ),
+);
+Label.displayName = "Label";

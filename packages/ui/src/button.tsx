@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 
 import { tv, type VariantProps } from "@fellipeutaka/styles";
 
-export const buttonVariants = tv({
+export const ButtonStyles = tv({
   base: "inline-flex items-center justify-center rounded-md select-none text-sm font-medium ring-offset-background transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
   variants: {
     variant: {
@@ -29,14 +29,14 @@ export const buttonVariants = tv({
 });
 
 export type ButtonProps = React.ComponentPropsWithoutRef<"button"> &
-  VariantProps<typeof buttonVariants>;
+  VariantProps<typeof ButtonStyles>;
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => {
     return (
       <button
         type="button"
-        className={buttonVariants({ variant, size, className })}
+        className={ButtonStyles({ variant, size, className })}
         ref={ref}
         {...props}
       />
