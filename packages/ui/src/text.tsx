@@ -36,10 +36,10 @@ type TextPProps = {
   asChild?: never;
 } & React.ComponentPropsWithoutRef<"p">;
 
-type TextProps = VariantProps<typeof TextStyles> &
+export type TextProps = VariantProps<typeof TextStyles> &
   (TextAsChildProps | TextSpanProps | TextLabelProps | TextPProps);
 
-const Text = forwardRef<TextElement, TextProps>(
+export const Text = forwardRef<TextElement, TextProps>(
   (
     { children, className, asChild = false, as: Tag = "p", variant, ...props },
     ref,
@@ -52,6 +52,3 @@ const Text = forwardRef<TextElement, TextProps>(
   },
 );
 Text.displayName = "Text";
-
-export { Text };
-export type { TextProps };

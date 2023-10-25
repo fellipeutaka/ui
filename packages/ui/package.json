@@ -49,6 +49,11 @@
       "require": "./dist/separator.js",
       "types": "./dist/separator.d.ts"
     },
+    "./skeleton": {
+      "import": "./dist/skeleton.mjs",
+      "require": "./dist/skeleton.js",
+      "types": "./dist/skeleton.d.ts"
+    },
     "./text": {
       "import": "./dist/text.mjs",
       "require": "./dist/text.js",
