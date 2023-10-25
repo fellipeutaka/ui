@@ -120,6 +120,14 @@ const Dialog = {
   Footer: DialogFooter,
 };
 
+function handleCloseDialog() {
+  document.dispatchEvent(
+    new KeyboardEvent("keydown", {
+      key: "Escape",
+    }),
+  );
+}
+
 export {
   Dialog,
   DialogRoot,
@@ -132,4 +140,5 @@ export {
   DialogFooter,
   DialogTitle,
   DialogDescription,
+  handleCloseDialog,
 };
