@@ -16,6 +16,18 @@
   "files": [
     "dist/**"
   ],
+  "keywords": [
+    "react",
+    "ui",
+    "component",
+    "library",
+    "design",
+    "system",
+    "accessible",
+    "a11y",
+    "radix",
+    "shadcn"
+  ],
   "exports": {
     "./button": {
       "import": "./dist/button.mjs",
@@ -31,6 +43,11 @@
       "import": "./dist/label.mjs",
       "require": "./dist/label.js",
       "types": "./dist/label.d.ts"
+    },
+    "./separator": {
+      "import": "./dist/separator.mjs",
+      "require": "./dist/separator.js",
+      "types": "./dist/separator.d.ts"
     },
     "./text": {
       "import": "./dist/text.mjs",
