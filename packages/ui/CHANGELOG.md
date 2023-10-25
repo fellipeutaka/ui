@@ -1,5 +1,15 @@
 # @fellipeutaka/ui
 
+## 1.3.0
+
+### Minor Changes
+
+- - Add Switch component
+  - Add Skeleton component
+  - Add Badge component
+  - Add handleCloseDialog util to Dialog
+  - Add Separator component
+
 ## 1.2.0
 
 ### Minor Changes
