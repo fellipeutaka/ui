@@ -1,5 +1,11 @@
 # @fellipeutaka/ui
 
+## 2.0.0
+
+### Major Changes
+
+- add select component
+
 ## 1.3.0
 
 ### Minor Changes
