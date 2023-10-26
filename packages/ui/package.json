@@ -49,6 +49,11 @@
       "require": "./dist/label.js",
       "types": "./dist/label.d.ts"
     },
+    "./select": {
+      "import": "./dist/select.mjs",
+      "require": "./dist/select.js",
+      "types": "./dist/select.d.ts"
+    },
     "./separator": {
       "import": "./dist/separator.mjs",
       "require": "./dist/separator.js",
@@ -84,6 +89,7 @@
   "dependencies": {
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
     "sonner": "^1.0.3"

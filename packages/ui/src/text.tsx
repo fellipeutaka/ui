@@ -39,16 +39,18 @@ type TextPProps = {
 export type TextProps = VariantProps<typeof TextStyles> &
   (TextAsChildProps | TextSpanProps | TextLabelProps | TextPProps);
 
-export const Text = forwardRef<TextElement, TextProps>(
-  (
+export const Text = Object.assign(
+  forwardRef<TextElement, TextProps>(function Text(
     { children, className, asChild = false, as: Tag = "p", variant, ...props },
     ref,
-  ) => {
+  ) {
     return (
       <Slot {...props} ref={ref} className={TextStyles({ className, variant })}>
         {asChild ? children : <Tag>{children}</Tag>}
       </Slot>
     );
+  }),
+  {
+    displayName: "Text",
   },
 );
-Text.displayName = "Text";

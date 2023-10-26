@@ -18,7 +18,7 @@
     "@commitlint/cli": "^17.8.0",
     "@commitlint/config-conventional": "^17.8.0",
     "@commitlint/cz-commitlint": "^17.8.0",
-    "@fellipeutaka/eslint-config": "^1.9.1",
+    "@fellipeutaka/eslint-config": "^1.10.1",
     "commitizen": "^4.3.0",
     "eslint": "^8.51.0",
     "husky": "^8.0.3",

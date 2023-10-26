@@ -5,14 +5,14 @@
       "outputs": ["dist/**", "storybook-static/**"],
       "dependsOn": ["^build"]
     },
-    "test": {
-      "outputs": ["coverage/**"]
-    },
-    "lint": {},
     "dev": {
       "cache": false,
       "persistent": true,
       "dependsOn": ["^build"]
+    },
+    "lint": {},
+    "test": {
+      "outputs": ["coverage/**"]
     },
     "clean": {
       "cache": false
