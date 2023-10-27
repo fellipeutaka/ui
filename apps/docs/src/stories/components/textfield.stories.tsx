@@ -1,11 +1,10 @@
-import { Search } from "lucide-react";
-
 import { Label } from "@fellipeutaka/ui/label";
 import {
   TextField,
   type TextFieldInputProps,
 } from "@fellipeutaka/ui/textfield";
 import type { Meta, StoryObj } from "@storybook/react";
+import { Search } from "lucide-react";
 
 const meta: Meta<TextFieldInputProps> = {
   title: "Components/TextField",

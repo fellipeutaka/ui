@@ -24,17 +24,14 @@ importers:
         specifier: ^17.8.1
         version: 17.8.1(commitizen@4.3.0)(inquirer@8.2.6)
       '@fellipeutaka/eslint-config':
-        specifier: ^1.12.0
-        version: 1.12.0(eslint@8.52.0)(tailwindcss@3.3.5)(typescript@5.2.2)
+        specifier: ^1.12.1
+        version: 1.12.1(eslint@8.52.0)(tailwindcss@3.3.5)(typescript@5.2.2)
       commitizen:
         specifier: ^4.3.0
         version: 4.3.0(typescript@5.2.2)
       eslint:
         specifier: ^8.52.0
         version: 8.52.0
-      eslint-plugin-tailwindcss:
-        specifier: ^3.13.0
-        version: 3.13.0(tailwindcss@3.3.5)
       husky:
         specifier: ^8.0.3
         version: 8.0.3
@@ -2310,8 +2307,8 @@ packages:
     resolution: {integrity: sha512-J8TOSBq3SoZbDhM9+R/u77hP93gz/rajSA+K2kGyijPpORPWUXHUpTaleoj+92As0S9uPRP7Oi8IqMf0u+ro6A==}
     dev: false
 
-  /@fellipeutaka/eslint-config@1.12.0(eslint@8.52.0)(tailwindcss@3.3.5)(typescript@5.2.2):
-    resolution: {integrity: sha512-lStamZWtU35HkXi3n5KrKS6mOvd8I4gpQ7NaRQ0v/DXu2kC3VXNqZIsxdCvf1Phlxpg3QS1hAFaBkwSqxDvFag==}
+  /@fellipeutaka/eslint-config@1.12.1(eslint@8.52.0)(tailwindcss@3.3.5)(typescript@5.2.2):
+    resolution: {integrity: sha512-sJTW2bR9C2QSmOdckQJQ2TgkWz0+4P33Rb1Oqw54pDaI6pFTH+WiXgcbQ7Ut8HbFfe/WLYHD/xsxMLx/OuN6qg==}
     peerDependencies:
       eslint: '*'
       typescript: '*'
