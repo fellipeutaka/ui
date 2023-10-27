@@ -6,10 +6,11 @@ import { Slot } from "@radix-ui/react-slot";
 export const TextStyles = tv({
   variants: {
     variant: {
-      p: "leading-7 [&:not(:first-child)]:mt-6",
-      blockquote: "border-l-2 border-border pl-6 italic",
-      label:
+      p: ["leading-7 [&:not(:first-child)]:mt-6"],
+      blockquote: ["border-border border-l-2 pl-6 italic"],
+      label: [
         "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+      ],
     },
   },
 });

@@ -1,6 +1,6 @@
 {
   "name": "@fellipeutaka/ui",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "An accessible and customizable component library powered by shadcn/ui",
   "sideEffects": false,
   "license": "MIT",
@@ -38,6 +38,11 @@
       "import": "./dist/button.mjs",
       "require": "./dist/button.js",
       "types": "./dist/button.d.ts"
+    },
+    "./checkbox": {
+      "import": "./dist/checkbox.mjs",
+      "require": "./dist/checkbox.js",
+      "types": "./dist/checkbox.d.ts"
     },
     "./dialog": {
       "import": "./dist/dialog.mjs",
@@ -92,6 +97,7 @@
     "clean": "rimraf .turbo node_modules dist"
   },
   "dependencies": {
+    "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-select": "^2.0.0",

@@ -1,6 +1,16 @@
 import { forwardRef } from "react";
 
-import { cn } from "@fellipeutaka/styles";
+import { tv } from "@fellipeutaka/styles";
+
+export const SeparatorStyles = tv({
+  base: ["bg-border shrink-0"],
+  variants: {
+    orientation: {
+      horizontal: "h-px w-full",
+      vertical: "h-full w-px",
+    },
+  },
+});
 
 export type SeparatorProps = {
   orientation?: "horizontal" | "vertical";
@@ -19,14 +29,8 @@ export const Separator = forwardRef<React.ElementRef<"div">, SeparatorProps>(
     return (
       <div
         ref={ref}
-        data-orientation={orientation}
+        className={SeparatorStyles({ className, orientation })}
         {...semanticProps}
-        {...props}
-        className={cn(
-          "shrink-0 bg-border",
-          orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
-          className,
-        )}
         {...props}
       />
     );
