@@ -1,4 +1,7 @@
 {
-  "extends": ["@fellipeutaka/eslint-config/react"],
+  "extends": [
+    "@fellipeutaka/eslint-config/react",
+    "@fellipeutaka/eslint-config/tailwind"
+  ],
   "ignorePatterns": ["dist"]
 }

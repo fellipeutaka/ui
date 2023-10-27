@@ -74,6 +74,11 @@
       "require": "./dist/text.js",
       "types": "./dist/text.d.ts"
     },
+    "./textfield": {
+      "import": "./dist/textfield.mjs",
+      "require": "./dist/textfield.js",
+      "types": "./dist/textfield.d.ts"
+    },
     "./toast": {
       "import": "./dist/toast.mjs",
       "require": "./dist/toast.js",

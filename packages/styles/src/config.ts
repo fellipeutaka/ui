@@ -1,6 +1,7 @@
-import { deepmerge } from "@fastify/deepmerge";
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
+
+import { deepmerge } from "@fastify/deepmerge";
 
 export const defaultTailwindConfig = {
   content: ["node_modules/@fellipeutaka/ui/dist/**/*.js"],

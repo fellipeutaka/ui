@@ -1,6 +1,7 @@
+import { Plus } from "lucide-react";
+
 import { Button, type ButtonProps } from "@fellipeutaka/ui/button";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Plus } from "lucide-react";
 
 type ButtonVariant = Required<ButtonProps["variant"]>;
 

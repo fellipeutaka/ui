@@ -1,6 +1,7 @@
 {
   "extends": [
     "@fellipeutaka/eslint-config/react",
+    "@fellipeutaka/eslint-config/tailwind",
     "plugin:storybook/recommended"
   ],
   "overrides": [
