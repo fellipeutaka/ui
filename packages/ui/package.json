@@ -29,6 +29,11 @@
     "shadcn"
   ],
   "exports": {
+    "./avatar": {
+      "import": "./dist/avatar.mjs",
+      "require": "./dist/avatar.js",
+      "types": "./dist/avatar.d.ts"
+    },
     "./badge": {
       "import": "./dist/badge.mjs",
       "require": "./dist/badge.js",
@@ -107,6 +112,7 @@
     "clean": "rimraf .turbo node_modules dist"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-label": "^2.0.2",
