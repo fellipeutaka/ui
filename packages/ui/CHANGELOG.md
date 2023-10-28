@@ -1,5 +1,14 @@
 # @fellipeutaka/ui
 
+## 2.2.0
+
+### Minor Changes
+
+- add Alert Dialog component
+  add Avatar component
+  add Slider component
+  add Textarea component
+
 ## 2.1.0
 
 ### Minor Changes
