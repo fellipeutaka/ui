@@ -29,7 +29,7 @@
     "build": "tsup",
     "dev": "tsup src/index.ts --watch",
     "test": "vitest",
-    "lint": "eslint src",
+    "lint": "eslint src --fix --max-warnings 0",
     "types:check": "tsc",
     "clean": "rimraf .turbo node_modules dist"
   },

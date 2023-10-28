@@ -11,10 +11,10 @@ export type { CheckboxProps } from "@radix-ui/react-checkbox";
 export const CheckboxStyles = {
   Root: tv({
     base: [
-      "border-input text-primary-foreground flex aspect-square w-5 appearance-none items-center justify-center rounded-sm border shadow outline-none transition",
+      "flex aspect-square w-5 appearance-none items-center justify-center rounded-sm border border-input text-primary-foreground shadow outline-none transition",
       "disabled:cursor-not-allowed disabled:opacity-50",
       "data-[state=checked]:border-primary data-[state=checked]:bg-primary",
-      "focus-visible:ring-input focus-visible:ring-offset-background focus-visible:ring-2 focus-visible:ring-offset-2",
+      "focus-visible:ring-2 focus-visible:ring-input focus-visible:ring-offset-2 focus-visible:ring-offset-background",
     ],
   }),
 };

@@ -6,7 +6,7 @@
     "build": "storybook build",
     "preview-storybook": "serve storybook-static",
     "clean": "rimraf .turbo storybook-static node_modules",
-    "lint": "eslint src"
+    "lint": "eslint src --fix --max-warnings 0"
   },
   "dependencies": {
     "@fellipeutaka/ui": "workspace:*",

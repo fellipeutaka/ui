@@ -18,7 +18,7 @@
     "@commitlint/cli": "^17.8.1",
     "@commitlint/config-conventional": "^17.8.1",
     "@commitlint/cz-commitlint": "^17.8.1",
-    "@fellipeutaka/eslint-config": "^1.12.1",
+    "@fellipeutaka/eslint-config": "^1.12.2",
     "commitizen": "^4.3.0",
     "eslint": "^8.52.0",
     "husky": "^8.0.3",
@@ -32,7 +32,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "bash -c 'pnpm test:ci'",
-      "eslint --fix",
+      "bash -c 'pnpm lint'",
       "prettier -w"
     ],
     "*.{md,json}": [

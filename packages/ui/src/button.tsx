@@ -4,8 +4,8 @@ import { tv, type VariantProps } from "@fellipeutaka/styles";
 
 export const ButtonStyles = tv({
   base: [
-    "ring-offset-background inline-flex select-none items-center justify-center rounded-md text-sm font-medium outline-none transition",
-    "focus-visible:ring-ring focus-visible:ring-2 focus-visible:ring-offset-2",
+    "inline-flex select-none items-center justify-center rounded-md text-sm font-medium outline-none ring-offset-background transition",
+    "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
     "disabled:cursor-not-allowed disabled:opacity-50",
   ],
   variants: {
@@ -16,7 +16,7 @@ export const ButtonStyles = tv({
         "hover:bg-destructive/90",
       ],
       outline: [
-        "border-input bg-background hover:bg-accent border",
+        "border border-input bg-background hover:bg-accent",
         "hover:text-accent-foreground",
       ],
       secondary: [

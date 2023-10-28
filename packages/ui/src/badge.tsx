@@ -5,7 +5,7 @@ import { tv, type VariantProps } from "@fellipeutaka/styles";
 export const BadgeStyles = tv({
   base: [
     "inline-flex items-center rounded-full border border-transparent px-2.5 py-0.5 text-xs font-semibold outline-none transition-colors",
-    "focus:ring-ring focus:ring-2 focus:ring-offset-2",
+    "focus:ring-2 focus:ring-ring focus:ring-offset-2",
   ],
   variants: {
     variant: {

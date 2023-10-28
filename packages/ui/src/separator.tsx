@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 import { tv } from "@fellipeutaka/styles";
 
 export const SeparatorStyles = tv({
-  base: ["bg-border shrink-0"],
+  base: ["shrink-0 bg-border"],
   variants: {
     orientation: {
       horizontal: "h-px w-full",

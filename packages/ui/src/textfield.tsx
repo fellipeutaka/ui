@@ -12,7 +12,7 @@ export const TextFieldStyles = {
     ],
   }),
   Slot: tv({
-    base: ["text-input relative z-10 flex shrink-0 items-center"],
+    base: ["relative z-10 flex shrink-0 items-center text-input"],
   }),
   Input: tv({
     base: [
@@ -23,8 +23,8 @@ export const TextFieldStyles = {
   }),
   Chrome: tv({
     base: [
-      "border-input ring-offset-background pointer-events-none absolute inset-0 z-0 rounded-md border ring-offset-2 transition",
-      "peer-focus-within:ring-ring peer-[&:focus-within[aria-invalid=true]]:ring-destructive peer-aria-[invalid=true]:border-destructive peer-focus-within:ring-2",
+      "pointer-events-none absolute inset-0 z-0 rounded-md border border-input ring-offset-2 ring-offset-background transition",
+      "peer-focus-within:ring-2 peer-focus-within:ring-ring peer-[&:focus-within[aria-invalid=true]]:ring-destructive peer-aria-[invalid=true]:border-destructive",
     ],
   }),
 };

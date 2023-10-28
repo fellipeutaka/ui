@@ -79,6 +79,11 @@
       "require": "./dist/text.js",
       "types": "./dist/text.d.ts"
     },
+    "./textarea": {
+      "import": "./dist/textarea.mjs",
+      "require": "./dist/textarea.js",
+      "types": "./dist/textarea.d.ts"
+    },
     "./textfield": {
       "import": "./dist/textfield.mjs",
       "require": "./dist/textfield.js",
@@ -93,7 +98,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint src",
+    "lint": "eslint src --fix --max-warnings 0",
     "clean": "rimraf .turbo node_modules dist"
   },
   "dependencies": {
