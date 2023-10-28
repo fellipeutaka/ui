@@ -6,7 +6,7 @@ export default defineConfig({
   entry: ["src/**/*.tsx"],
   format: ["cjs", "esm"],
   minify: true,
-  bundle: true,
+  bundle: false,
   clean: true,
   dts: true,
   esbuildPlugins: [

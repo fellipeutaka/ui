@@ -29,6 +29,11 @@
     "shadcn"
   ],
   "exports": {
+    "./alert-dialog": {
+      "import": "./dist/alert-dialog.mjs",
+      "require": "./dist/alert-dialog.js",
+      "types": "./dist/alert-dialog.d.ts"
+    },
     "./avatar": {
       "import": "./dist/avatar.mjs",
       "require": "./dist/avatar.js",
@@ -112,6 +117,7 @@
     "clean": "rimraf .turbo node_modules dist"
   },
   "dependencies": {
+    "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
