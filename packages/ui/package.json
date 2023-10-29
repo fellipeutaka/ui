@@ -1,6 +1,6 @@
 {
   "name": "@fellipeutaka/ui",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "An accessible and customizable component library powered by shadcn/ui",
   "sideEffects": false,
   "license": "MIT",

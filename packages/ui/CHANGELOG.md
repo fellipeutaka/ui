@@ -1,5 +1,14 @@
 # @fellipeutaka/ui
 
+## 2.3.0
+
+### Minor Changes
+
+- add card component
+  add radio group component
+  add accordion component
+  fix alert dialog, dialog and select display name
+
 ## 2.2.0
 
 ### Minor Changes
