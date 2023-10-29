@@ -54,6 +54,11 @@
       "require": "./dist/button.js",
       "types": "./dist/button.d.ts"
     },
+    "./card": {
+      "import": "./dist/card.mjs",
+      "require": "./dist/card.js",
+      "types": "./dist/card.d.ts"
+    },
     "./checkbox": {
       "import": "./dist/checkbox.mjs",
       "require": "./dist/checkbox.js",
