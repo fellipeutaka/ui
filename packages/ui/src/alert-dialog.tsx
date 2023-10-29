@@ -11,7 +11,11 @@ export const AlertDialogStyles = DialogStyles;
 
 const AlertDialogRoot = AlertDialogPrimitive.Root;
 
+AlertDialogRoot.displayName = "AlertDialog";
+
 const AlertDialogTrigger = AlertDialogPrimitive.Trigger;
+
+AlertDialogTrigger.displayName = "AlertDialog.Trigger";
 
 const AlertDialogPortal = AlertDialogPrimitive.Portal;
 
@@ -25,7 +29,7 @@ const AlertDialogOverlay = forwardRef<
     {...props}
   />
 ));
-AlertDialogOverlay.displayName = AlertDialogPrimitive.Overlay.displayName;
+AlertDialogOverlay.displayName = "AlertDialog.Overlay";
 
 const AlertDialogContent = forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Content>,
@@ -42,7 +46,7 @@ const AlertDialogContent = forwardRef<
     </AlertDialogPrimitive.Content>
   </AlertDialogPortal>
 ));
-AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName;
+AlertDialogContent.displayName = "AlertDialog.Content";
 
 const AlertDialogHeader = ({
   className,
@@ -50,7 +54,7 @@ const AlertDialogHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={AlertDialogStyles.Header({ className })} {...props} />
 );
-AlertDialogHeader.displayName = "DialogHeader";
+AlertDialogHeader.displayName = "AlertDialog.Header";
 
 const AlertDialogFooter = ({
   className,
@@ -58,7 +62,7 @@ const AlertDialogFooter = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={AlertDialogStyles.Footer({ className })} {...props} />
 );
-AlertDialogFooter.displayName = "DialogFooter";
+AlertDialogFooter.displayName = "AlertDialog.Footer";
 
 const AlertDialogTitle = forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Title>,
@@ -70,7 +74,7 @@ const AlertDialogTitle = forwardRef<
     {...props}
   />
 ));
-AlertDialogTitle.displayName = AlertDialogPrimitive.Title.displayName;
+AlertDialogTitle.displayName = "AlertDialog.Title";
 
 const AlertDialogDescription = forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Description>,
@@ -82,8 +86,7 @@ const AlertDialogDescription = forwardRef<
     {...props}
   />
 ));
-AlertDialogDescription.displayName =
-  AlertDialogPrimitive.Description.displayName;
+AlertDialogDescription.displayName = "AlertDialog.Description";
 
 export type AlertDialogActionProps = React.ComponentPropsWithoutRef<
   typeof AlertDialogPrimitive.Action
@@ -104,7 +107,7 @@ const AlertDialogAction = forwardRef<
     {...props}
   />
 ));
-AlertDialogAction.displayName = AlertDialogPrimitive.Action.displayName;
+AlertDialogAction.displayName = "AlertDialog.Action";
 
 export type AlertDialogCancelProps = React.ComponentPropsWithoutRef<
   typeof AlertDialogPrimitive.Cancel
@@ -125,9 +128,9 @@ const AlertDialogCancel = forwardRef<
     {...props}
   />
 ));
-AlertDialogCancel.displayName = AlertDialogPrimitive.Cancel.displayName;
+AlertDialogCancel.displayName = "AlertDialog.Cancel";
 
-function handleCloseAlertDialog() {
+export function handleCloseAlertDialog() {
   document.dispatchEvent(
     new KeyboardEvent("keydown", {
       key: "Escape",
@@ -135,8 +138,7 @@ function handleCloseAlertDialog() {
   );
 }
 
-const AlertDialog = Object.assign(AlertDialogRoot, {
-  Root: AlertDialogRoot,
+export const AlertDialog = Object.assign(AlertDialogRoot, {
   Trigger: AlertDialogTrigger,
   Content: AlertDialogContent,
   Title: AlertDialogTitle,
@@ -146,19 +148,3 @@ const AlertDialog = Object.assign(AlertDialogRoot, {
   Action: AlertDialogAction,
   Cancel: AlertDialogCancel,
 });
-
-export {
-  AlertDialog,
-  AlertDialogRoot,
-  AlertDialogPortal,
-  AlertDialogOverlay,
-  AlertDialogTrigger,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogFooter,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogTitle,
-  AlertDialogDescription,
-  handleCloseAlertDialog,
-};

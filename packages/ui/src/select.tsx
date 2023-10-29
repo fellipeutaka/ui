@@ -69,11 +69,20 @@ export const SelectStyles = {
   }),
 };
 
+export type SelectRootProps = SelectPrimitive.SelectGroupProps;
+const SelectRoot = SelectPrimitive.Root;
+
+SelectRoot.displayName = "Select";
+
 export type SelectGroupProps = SelectPrimitive.SelectGroupProps;
 const SelectGroup = SelectPrimitive.Group;
 
+SelectGroup.displayName = "Select.Group";
+
 export type SelectValueProps = SelectPrimitive.SelectValueProps;
 const SelectValue = SelectPrimitive.Value;
+
+SelectValue.displayName = "Select.Value";
 
 export type SelectTriggerProps = Omit<
   SelectPrimitive.SelectTriggerProps,
@@ -99,7 +108,7 @@ const SelectTrigger = forwardRef<
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
-SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
+SelectTrigger.displayName = "Select.Trigger";
 
 export type SelectContentProps = SelectPrimitive.SelectContentProps;
 
@@ -131,7 +140,7 @@ const SelectContent = forwardRef<
     </SelectPrimitive.Content>
   </SelectPrimitive.Portal>
 ));
-SelectContent.displayName = SelectPrimitive.Content.displayName;
+SelectContent.displayName = "Select.Content";
 
 export type SelectLabelProps = SelectPrimitive.SelectLabelProps;
 
@@ -145,7 +154,7 @@ const SelectLabel = forwardRef<
     {...props}
   />
 ));
-SelectLabel.displayName = SelectPrimitive.Label.displayName;
+SelectLabel.displayName = "Select.Label";
 
 export type SelectItemProps = SelectPrimitive.SelectItemProps;
 
@@ -167,7 +176,7 @@ const SelectItem = forwardRef<
     <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
   </SelectPrimitive.Item>
 ));
-SelectItem.displayName = SelectPrimitive.Item.displayName;
+SelectItem.displayName = "Select.Item";
 
 export type SelectSeparatorProps = SelectPrimitive.SelectSeparatorProps;
 
@@ -181,12 +190,11 @@ const SelectSeparator = forwardRef<
     {...props}
   />
 ));
-SelectSeparator.displayName = SelectPrimitive.Separator.displayName;
+SelectSeparator.displayName = "Select.Separator";
 
 export type SelectProps = SelectPrimitive.SelectProps;
 
-export const Select = Object.assign(SelectPrimitive.Root, {
-  Root: SelectPrimitive.Root,
+export const Select = Object.assign(SelectRoot, {
   Group: SelectGroup,
   Value: SelectValue,
   Trigger: SelectTrigger,
@@ -195,13 +203,3 @@ export const Select = Object.assign(SelectPrimitive.Root, {
   Item: SelectItem,
   Separator: SelectSeparator,
 });
-
-export {
-  SelectGroup,
-  SelectValue,
-  SelectTrigger,
-  SelectContent,
-  SelectLabel,
-  SelectItem,
-  SelectSeparator,
-};

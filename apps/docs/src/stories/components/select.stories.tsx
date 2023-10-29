@@ -10,7 +10,7 @@ const meta: Meta<SelectProps> = {
   },
   render(props) {
     return (
-      <Select.Root {...props}>
+      <Select {...props}>
         <Select.Trigger placeholder="Select a fruit" className="w-56" />
         <Select.Content>
           <Select.Group>
@@ -22,7 +22,7 @@ const meta: Meta<SelectProps> = {
             <Select.Item value="pineapple">Pineapple</Select.Item>
           </Select.Group>
         </Select.Content>
-      </Select.Root>
+      </Select>
     );
   },
 };
@@ -36,9 +36,9 @@ export const Default: Story = {};
 export const WithLabel: Story = {
   render(props) {
     return (
-      <div className="flex items-center gap-2">
+      <div className="space-y-2">
         <Label htmlFor="fruit">Fruit</Label>
-        <Select.Root {...props}>
+        <Select {...props}>
           <Select.Trigger
             placeholder="Select a fruit"
             id="fruit"
@@ -54,7 +54,7 @@ export const WithLabel: Story = {
               <Select.Item value="pineapple">Pineapple</Select.Item>
             </Select.Group>
           </Select.Content>
-        </Select.Root>
+        </Select>
       </div>
     );
   },

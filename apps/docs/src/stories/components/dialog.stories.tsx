@@ -4,14 +4,14 @@ import { Label } from "@fellipeutaka/ui/label";
 import { TextField } from "@fellipeutaka/ui/textfield";
 import type { Meta, StoryObj } from "@storybook/react";
 
-type DialogProps = React.ComponentPropsWithoutRef<(typeof Dialog)["Root"]>;
+type DialogProps = React.ComponentPropsWithoutRef<typeof Dialog>;
 
 const meta: Meta<DialogProps> = {
   title: "Components/Dialog",
-  component: Dialog.Root,
+  component: Dialog,
   render(props) {
     return (
-      <Dialog.Root {...props}>
+      <Dialog {...props}>
         <Dialog.Trigger asChild>
           <Button variant="outline">Edit Profile</Button>
         </Dialog.Trigger>
@@ -44,7 +44,7 @@ const meta: Meta<DialogProps> = {
             <Button>Save changes</Button>
           </Dialog.Footer>
         </Dialog.Content>
-      </Dialog.Root>
+      </Dialog>
     );
   },
 };

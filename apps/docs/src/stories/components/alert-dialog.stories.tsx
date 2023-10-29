@@ -2,20 +2,18 @@ import { AlertDialog } from "@fellipeutaka/ui/alert-dialog";
 import { Button } from "@fellipeutaka/ui/button";
 import type { Meta, StoryObj } from "@storybook/react";
 
-type AlertDialogProps = React.ComponentPropsWithoutRef<
-  (typeof AlertDialog)["Root"]
->;
+type AlertDialogProps = React.ComponentPropsWithoutRef<typeof AlertDialog>;
 
 const meta: Meta<AlertDialogProps> = {
   title: "Components/Alert Dialog",
-  component: AlertDialog.Root,
+  component: AlertDialog,
   render(props) {
     return (
-      <AlertDialog.Root {...props}>
+      <AlertDialog {...props}>
         <AlertDialog.Trigger asChild>
           <Button variant="destructive">Delete profile</Button>
         </AlertDialog.Trigger>
-        <AlertDialog.Content className="sm:max-w-[425px]">
+        <AlertDialog.Content>
           <AlertDialog.Header>
             <AlertDialog.Title>Are you absolutely sure?</AlertDialog.Title>
             <AlertDialog.Description>
@@ -30,7 +28,7 @@ const meta: Meta<AlertDialogProps> = {
             </AlertDialog.Action>
           </AlertDialog.Footer>
         </AlertDialog.Content>
-      </AlertDialog.Root>
+      </AlertDialog>
     );
   },
 };

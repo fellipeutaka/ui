@@ -3,9 +3,10 @@
   "private": true,
   "scripts": {
     "dev": "storybook dev -p 6006 --no-open",
-    "build": "storybook build",
-    "preview-storybook": "serve storybook-static",
-    "clean": "rimraf .turbo storybook-static node_modules",
+    "build": "storybook build -o dist",
+    "start": "serve dist",
+    "preview-storybook": "serve dist",
+    "clean": "rimraf .turbo dist node_modules",
     "lint": "eslint src --fix --max-warnings 0"
   },
   "dependencies": {

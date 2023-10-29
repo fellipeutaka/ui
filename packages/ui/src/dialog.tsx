@@ -47,11 +47,17 @@ export const DialogStyles = {
 
 const DialogRoot = DialogPrimitive.Root;
 
+DialogRoot.displayName = "Dialog";
+
 const DialogTrigger = DialogPrimitive.Trigger;
+
+DialogTrigger.displayName = "Dialog.Trigger";
 
 const DialogPortal = DialogPrimitive.Portal;
 
-const DialogClose = DialogPrimitive.Close;
+export const DialogClose = DialogPrimitive.Close;
+
+DialogClose.displayName = "Dialog.Close";
 
 const DialogOverlay = forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
@@ -63,7 +69,7 @@ const DialogOverlay = forwardRef<
     {...props}
   />
 ));
-DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
+DialogOverlay.displayName = "Dialog.Overlay";
 
 const DialogContent = forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
@@ -86,7 +92,7 @@ const DialogContent = forwardRef<
     </DialogPrimitive.Content>
   </DialogPortal>
 ));
-DialogContent.displayName = DialogPrimitive.Content.displayName;
+DialogContent.displayName = "Dialog.Content";
 
 const DialogHeader = ({
   className,
@@ -94,7 +100,7 @@ const DialogHeader = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={DialogStyles.Header({ className })} {...props} />
 );
-DialogHeader.displayName = "DialogHeader";
+DialogHeader.displayName = "Dialog.Header";
 
 const DialogFooter = ({
   className,
@@ -102,7 +108,7 @@ const DialogFooter = ({
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={DialogStyles.Footer({ className })} {...props} />
 );
-DialogFooter.displayName = "DialogFooter";
+DialogFooter.displayName = "Dialog.Footer";
 
 const DialogTitle = forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
@@ -114,7 +120,7 @@ const DialogTitle = forwardRef<
     {...props}
   />
 ));
-DialogTitle.displayName = DialogPrimitive.Title.displayName;
+DialogTitle.displayName = "Dialog.Title";
 
 const DialogDescription = forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
@@ -126,9 +132,9 @@ const DialogDescription = forwardRef<
     {...props}
   />
 ));
-DialogDescription.displayName = DialogPrimitive.Description.displayName;
+DialogDescription.displayName = "Dialog.Description";
 
-function handleCloseDialog() {
+export function handleCloseDialog() {
   document.dispatchEvent(
     new KeyboardEvent("keydown", {
       key: "Escape",
@@ -136,8 +142,7 @@ function handleCloseDialog() {
   );
 }
 
-const Dialog = Object.assign(DialogRoot, {
-  Root: DialogRoot,
+export const Dialog = Object.assign(DialogRoot, {
   Trigger: DialogTrigger,
   Content: DialogContent,
   Title: DialogTitle,
@@ -145,18 +150,3 @@ const Dialog = Object.assign(DialogRoot, {
   Header: DialogHeader,
   Footer: DialogFooter,
 });
-
-export {
-  Dialog,
-  DialogRoot,
-  DialogPortal,
-  DialogOverlay,
-  DialogClose,
-  DialogTrigger,
-  DialogContent,
-  DialogHeader,
-  DialogFooter,
-  DialogTitle,
-  DialogDescription,
-  handleCloseDialog,
-};
