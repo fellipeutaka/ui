@@ -29,6 +29,11 @@
     "shadcn"
   ],
   "exports": {
+    "./accordion": {
+      "import": "./dist/accordion.mjs",
+      "require": "./dist/accordion.js",
+      "types": "./dist/accordion.d.ts"
+    },
     "./alert-dialog": {
       "import": "./dist/alert-dialog.mjs",
       "require": "./dist/alert-dialog.js",
@@ -117,6 +122,7 @@
     "clean": "rimraf .turbo node_modules dist"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-checkbox": "^1.0.4",
