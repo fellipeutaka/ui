@@ -104,6 +104,11 @@
       "require": "./dist/switch.js",
       "types": "./dist/switch.d.ts"
     },
+    "./table": {
+      "import": "./dist/table.mjs",
+      "require": "./dist/table.js",
+      "types": "./dist/table.d.ts"
+    },
     "./text": {
       "import": "./dist/text.mjs",
       "require": "./dist/text.js",
