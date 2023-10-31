@@ -10,6 +10,7 @@
     "lucide",
     "shadcn",
     "sonner",
+    "tanstack",
     "treeshake",
     "tsup"
   ]

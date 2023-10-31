@@ -64,6 +64,11 @@
       "require": "./dist/checkbox.js",
       "types": "./dist/checkbox.d.ts"
     },
+    "./data-table": {
+      "import": "./dist/data-table.mjs",
+      "require": "./dist/data-table.js",
+      "types": "./dist/data-table.d.ts"
+    },
     "./dialog": {
       "import": "./dist/dialog.mjs",
       "require": "./dist/dialog.js",
@@ -154,6 +159,7 @@
     "@radix-ui/react-slider": "^1.1.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
+    "@tanstack/react-table": "^8.10.7",
     "sonner": "^1.0.3"
   },
   "devDependencies": {

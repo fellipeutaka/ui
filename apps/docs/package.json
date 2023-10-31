@@ -13,7 +13,8 @@
     "@fellipeutaka/ui": "workspace:*",
     "lucide-react": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@fellipeutaka/styles": "workspace:*",
