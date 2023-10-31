@@ -79,6 +79,11 @@
       "require": "./dist/dropdown-menu.js",
       "types": "./dist/dropdown-menu.d.ts"
     },
+    "./form": {
+      "import": "./dist/form.mjs",
+      "require": "./dist/form.js",
+      "types": "./dist/form.d.ts"
+    },
     "./label": {
       "import": "./dist/label.mjs",
       "require": "./dist/label.js",
@@ -147,6 +152,7 @@
     "clean": "rimraf .turbo node_modules dist"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.3.2",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -160,6 +166,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
     "@tanstack/react-table": "^8.10.7",
+    "react-hook-form": "^7.47.0",
     "sonner": "^1.0.3"
   },
   "devDependencies": {
@@ -169,12 +176,14 @@
     "lucide-react": "^0.288.0",
     "react": "^18.2.0",
     "tailwind-variants": "^0.1.14",
-    "tsup": "^7.2.0"
+    "tsup": "^7.2.0",
+    "zod": "^3.22.4"
   },
   "peerDependencies": {
     "@fellipeutaka/styles": "*",
     "lucide-react": "*",
-    "react": "^18"
+    "react": "^18",
+    "zod": "^3"
   },
   "publishConfig": {
     "access": "public"
