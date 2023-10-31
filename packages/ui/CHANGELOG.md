@@ -1,5 +1,14 @@
 # @fellipeutaka/ui
 
+## 2.4.0
+
+### Minor Changes
+
+- - Add Form component
+  - Add Data Table component
+  - Add Dropdown Menu component
+  - Add Table component
+
 ## 2.3.0
 
 ### Minor Changes
