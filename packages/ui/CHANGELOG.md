@@ -4,50 +4,50 @@
 
 ### Minor Changes
 
-- - Add Form component
-  - Add Data Table component
-  - Add Dropdown Menu component
-  - Add Table component
+- Add Form component
+- Add Data Table component
+- Add Dropdown Menu component
+- Add Table component
 
 ## 2.3.0
 
 ### Minor Changes
 
-- add card component
-  add radio group component
-  add accordion component
-  fix alert dialog, dialog and select display name
+- Add Card component
+- Add Radio group component
+- Add Accordion component
+- Fix Alert Dialog, Dialog and Select display name
 
 ## 2.2.0
 
 ### Minor Changes
 
-- add Alert Dialog component
-  add Avatar component
-  add Slider component
-  add Textarea component
+- Add Alert Dialog component
+- Add Avatar component
+- Add Slider component
+- Add Textarea component
 
 ## 2.1.0
 
 ### Minor Changes
 
-- add textfield and checkbox
+- Add Textfield and checkbox
 
 ## 2.0.0
 
 ### Major Changes
 
-- add select component
+- Add Select component
 
 ## 1.3.0
 
 ### Minor Changes
 
-- - Add Switch component
-  - Add Skeleton component
-  - Add Badge component
-  - Add handleCloseDialog util to Dialog
-  - Add Separator component
+- Add Switch component
+- Add Skeleton component
+- Add Badge component
+- Add handleCloseDialog util to Dialog
+- Add Separator component
 
 ## 1.2.0
 
@@ -59,16 +59,16 @@
 
 ### Minor Changes
 
-- add text component
+- Add Text component
 
 ## 1.0.0
 
 ### Major Changes
 
-- add dialog
+- Add Dialog
 
 ## 0.2.0
 
 ### Minor Changes
 
-- add toast
+- Add Toast
