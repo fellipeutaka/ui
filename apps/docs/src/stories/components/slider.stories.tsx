@@ -7,6 +7,7 @@ const meta: Meta<SliderProps> = {
   args: {
     step: 1,
     max: 100,
+    defaultValue: [0],
   },
 };
 

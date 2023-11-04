@@ -19,9 +19,11 @@ export const SliderStyles = {
   }),
   Thumb: tv({
     base: [
-      "block h-5 w-5 rounded-full border-2 border-background bg-primary outline-none ring-offset-background transition",
-      "focus-visible:ring-2 focus-visible:ring-ring",
+      "block h-5 w-5 rounded-full border-2 border-primary bg-background outline-none ring-offset-2 ring-offset-background transition-all",
+      "data-[grabbing=false]:focus-visible:ring-2 data-[grabbing=false]:focus-visible:ring-primary",
       "disabled:pointer-events-none disabled:opacity-50",
+      "hover:cursor-grab",
+      "data-[grabbing=true]:cursor-grabbing data-[grabbing=true]:border-4",
     ],
   }),
 };
@@ -33,16 +35,34 @@ export type SliderProps = React.ComponentPropsWithoutRef<
 export const Slider = forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
   SliderProps
->(({ className, ...props }, ref) => (
-  <SliderPrimitive.Root
-    ref={ref}
-    className={SliderStyles.Root({ className })}
-    {...props}
-  >
-    <SliderPrimitive.Track className={SliderStyles.Track()}>
-      <SliderPrimitive.Range className={SliderStyles.Range()} />
-    </SliderPrimitive.Track>
-    <SliderPrimitive.Thumb className={SliderStyles.Thumb()} />
-  </SliderPrimitive.Root>
-));
+>(({ className, ...props }, ref) => {
+  const value = props.value || props.defaultValue;
+
+  return (
+    <SliderPrimitive.Root
+      ref={ref}
+      className={SliderStyles.Root({ className })}
+      {...props}
+    >
+      <SliderPrimitive.Track className={SliderStyles.Track()}>
+        <SliderPrimitive.Range className={SliderStyles.Range()} />
+      </SliderPrimitive.Track>
+      {value?.map((_, i) => (
+        <SliderPrimitive.Thumb
+          key={i}
+          className={SliderStyles.Thumb()}
+          data-grabbing="false"
+          onPointerUp={(e) => {
+            const thumb = e.target as HTMLSpanElement;
+            thumb.setAttribute("data-grabbing", "false");
+          }}
+          onPointerDown={(e) => {
+            const thumb = e.target as HTMLSpanElement;
+            thumb.setAttribute("data-grabbing", "true");
+          }}
+        />
+      ))}
+    </SliderPrimitive.Root>
+  );
+});
 Slider.displayName = "Slider";
