@@ -84,6 +84,11 @@
       "require": "./dist/form.js",
       "types": "./dist/form.d.ts"
     },
+    "./heading": {
+      "import": "./dist/heading.mjs",
+      "require": "./dist/heading.js",
+      "types": "./dist/heading.d.ts"
+    },
     "./label": {
       "import": "./dist/label.mjs",
       "require": "./dist/label.js",
