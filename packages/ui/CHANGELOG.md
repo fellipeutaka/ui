@@ -1,5 +1,14 @@
 # @fellipeutaka/ui
 
+## 2.5.0
+
+### Minor Changes
+
+- Add onGrab to Slider component
+- Add Link variant to Text component
+- Add Heading component
+- Fix Accordion Trigger displayName
+
 ## 2.4.0
 
 ### Minor Changes
