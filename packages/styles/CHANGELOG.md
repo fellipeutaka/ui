@@ -1,5 +1,11 @@
 # @fellipeutaka/styles
 
+## 1.2.0
+
+### Minor Changes
+
+- Add scrollbar-gutter stable
+
 ## 1.1.0
 
 ### Minor Changes
