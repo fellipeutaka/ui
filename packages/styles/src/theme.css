@@ -64,6 +64,10 @@
   --radius: 0.5rem;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   @apply bg-background text-foreground antialiased;
   font-feature-settings:
@@ -116,4 +120,5 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }

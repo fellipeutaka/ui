@@ -4,10 +4,10 @@
 
 ### Minor Changes
 
-- improve defineTailwindConfig performance using @fastify/deepmerge instead of deepmerge
+- Improve defineTailwindConfig performance using @fastify/deepmerge instead of deepmerge
 
 ## 1.0.0
 
 ### Major Changes
 
-- create a defineTailwindConfig util to merge all tailwind config to the default config
+- Create a defineTailwindConfig util to merge all tailwind config to the default config
