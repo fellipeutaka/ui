@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 
 import { tv, type VariantProps } from "@fellipeutaka/styles";
+import { Slot } from "@radix-ui/react-slot";
 
 export const ButtonStyles = tv({
   base: [
@@ -40,13 +41,17 @@ export const ButtonStyles = tv({
 });
 
 export type ButtonProps = React.ComponentPropsWithoutRef<"button"> &
-  VariantProps<typeof ButtonStyles>;
+  VariantProps<typeof ButtonStyles> & {
+    asChild?: boolean;
+  };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, ...props }, ref) => {
+  ({ className, type = "button", variant, size, asChild, ...props }, ref) => {
+    const Component = asChild ? Slot : "button";
+
     return (
-      <button
-        type="button"
+      <Component
+        type={type}
         className={ButtonStyles({ variant, size, className })}
         ref={ref}
         {...props}
