@@ -1,5 +1,11 @@
 # @fellipeutaka/ui
 
+## 2.6.0
+
+### Minor Changes
+
+- Add asChild prop to Button
+
 ## 2.5.0
 
 ### Minor Changes
