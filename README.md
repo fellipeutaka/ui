@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-pnpm i @fellipeutaka/ui lucide-react
+pnpm i @fellipeutaka/ui @fellipeutaka/styles lucide-react
 ```
 
 
