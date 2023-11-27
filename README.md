@@ -2,12 +2,12 @@
 
 ## Installation
 
-Install Design System styles.
-
 ```bash
-pnpm i @fellipeutaka/styles -D
+pnpm i @fellipeutaka/ui @fellipeutaka/styles lucide-react
 ```
 
+
+## Initial configuration
 Extend the Design System theme on `tailwind.config.js`.
 
 ```js
@@ -31,6 +31,7 @@ module.exports = defineTailwindConfig({
 Import `theme.css` file at your `globals.css`.
 
 ```css
+/* default theme */
 @import "@fellipeutaka/styles/theme.css";
 
 @tailwind base;
@@ -38,7 +39,21 @@ Import `theme.css` file at your `globals.css`.
 @tailwind utilities;
 ```
 
-Or, if you want to customize it...
+Great! Everything is ready to use it.
+
+```jsx
+import { Button } from "@fellipeutaka/ui/button";
+
+export function App() {
+  return <Button>Hello World!</Button>;
+}
+```
+
+
+## Customization
+
+
+Customizing is as simple as changing CSS variables values.
 
 ```css
 @tailwind base;
@@ -153,21 +168,5 @@ Or, if you want to customize it...
   ::-moz-focus-inner {
     padding: 0;
   }
-}
-```
-
-Install the components and Lucide Icons for the icons.
-
-```bash
-pnpm i @fellipeutaka/ui lucide-react
-```
-
-Great! Now, just use it.
-
-```jsx
-import { Button } from "@fellipeutaka/ui/button";
-
-export function App() {
-  return <Button>Hello World!</Button>;
 }
 ```
