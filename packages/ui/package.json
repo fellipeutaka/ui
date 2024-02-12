@@ -2,7 +2,6 @@
   "name": "@fellipeutaka/ui",
   "version": "2.6.0",
   "description": "An accessible and customizable component library powered by shadcn/ui",
-  "sideEffects": false,
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -13,21 +12,6 @@
     "url": "https://github.com/fellipeutaka/ui/issues"
   },
   "homepage": "https://fellipeutaka-ui.vercel.app",
-  "files": [
-    "dist/**"
-  ],
-  "keywords": [
-    "react",
-    "ui",
-    "component",
-    "library",
-    "design",
-    "system",
-    "accessible",
-    "a11y",
-    "radix",
-    "shadcn"
-  ],
   "exports": {
     "./accordion": {
       "import": "./dist/accordion.mjs",
@@ -150,6 +134,21 @@
       "types": "./dist/toast.d.ts"
     }
   },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "ui",
+    "component",
+    "library",
+    "design",
+    "system",
+    "accessible",
+    "a11y",
+    "radix",
+    "shadcn"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
@@ -172,7 +171,7 @@
     "@radix-ui/react-switch": "^1.0.3",
     "@tanstack/react-table": "^8.10.7",
     "react-hook-form": "^7.47.0",
-    "sonner": "^1.0.3"
+    "sonner": "^1.4.0"
   },
   "devDependencies": {
     "@fellipeutaka/styles": "workspace:*",
@@ -181,7 +180,7 @@
     "lucide-react": "^0.288.0",
     "react": "^18.2.0",
     "tailwind-variants": "^0.1.14",
-    "tsup": "^7.2.0",
+    "tsup": "^8.0.2",
     "zod": "^3.22.4"
   },
   "peerDependencies": {
