@@ -23,6 +23,11 @@
       "require": "./dist/alert-dialog.js",
       "types": "./dist/alert-dialog.d.ts"
     },
+    "./alert": {
+      "import": "./dist/alert.mjs",
+      "require": "./dist/alert.js",
+      "types": "./dist/alert.d.ts"
+    },
     "./avatar": {
       "import": "./dist/avatar.mjs",
       "require": "./dist/avatar.js",
@@ -153,6 +158,7 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint src --fix --max-warnings 0",
+    "format": "prettier --write src",
     "clean": "rimraf .turbo node_modules dist"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import { forwardRef } from "react";
 
 import { tv } from "@fellipeutaka/styles";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
@@ -23,7 +23,7 @@ export type AvatarProps = React.ComponentPropsWithoutRef<
   typeof AvatarPrimitive.Root
 >;
 
-const Root = React.forwardRef<
+const Root = forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
   AvatarProps
 >(({ className, ...props }, ref) => (
@@ -39,7 +39,7 @@ export type AvatarImageProps = React.ComponentPropsWithoutRef<
   typeof AvatarPrimitive.Image
 >;
 
-const Image = React.forwardRef<
+const Image = forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
   AvatarImageProps
 >(({ className, ...props }, ref) => (
@@ -55,7 +55,7 @@ export type AvatarFallbackProps = React.ComponentPropsWithoutRef<
   typeof AvatarPrimitive.Fallback
 >;
 
-const Fallback = React.forwardRef<
+const Fallback = forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>
 >(({ className, ...props }, ref) => (
