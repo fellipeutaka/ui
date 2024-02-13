@@ -39,7 +39,7 @@ const useTextFieldContext = () => {
 
 export type TextFieldRootProps = React.ComponentPropsWithoutRef<"div">;
 
-const TextFieldRoot = forwardRef<HTMLDivElement, TextFieldRootProps>(
+export const TextFieldRoot = forwardRef<HTMLDivElement, TextFieldRootProps>(
   ({ className, ...props }, ref) => {
     return (
       <div
@@ -81,7 +81,7 @@ export type TextFieldSlotProps = React.ComponentPropsWithoutRef<"div"> & {
   children: React.ReactNode;
 };
 
-const TextFieldSlot = forwardRef<HTMLDivElement, TextFieldSlotProps>(
+export const TextFieldSlot = forwardRef<HTMLDivElement, TextFieldSlotProps>(
   ({ className, ...props }, ref) => {
     if (!props.children) return null;
 

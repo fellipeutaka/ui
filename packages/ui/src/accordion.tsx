@@ -27,11 +27,11 @@ export const AccordionStyles = {
   }),
 };
 
-const AccordionRoot = AccordionPrimitive.Root;
+export const AccordionRoot = AccordionPrimitive.Root;
 
 AccordionRoot.displayName = "Accordion";
 
-const AccordionItem = forwardRef<
+export const AccordionItem = forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
@@ -43,7 +43,7 @@ const AccordionItem = forwardRef<
 ));
 AccordionItem.displayName = "Accordion.Item";
 
-const AccordionTrigger = forwardRef<
+export const AccordionTrigger = forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(({ className, children, ...props }, ref) => (
@@ -60,7 +60,7 @@ const AccordionTrigger = forwardRef<
 ));
 AccordionTrigger.displayName = "Accordion.Trigger";
 
-const AccordionContent = forwardRef<
+export const AccordionContent = forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (

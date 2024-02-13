@@ -13,7 +13,7 @@ export const TextareaStyles = tv({
 
 export type TextareaProps = React.ComponentPropsWithoutRef<"textarea">;
 
-const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
+export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
       <textarea
@@ -25,5 +25,3 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   },
 );
 Textarea.displayName = "Textarea";
-
-export { Textarea };

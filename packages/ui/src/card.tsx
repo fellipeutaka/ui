@@ -26,14 +26,14 @@ export const CardStyles = {
 };
 
 export type CardProps = React.ComponentPropsWithoutRef<"div">;
-const CardRoot = forwardRef<HTMLDivElement, CardProps>(
+export const CardRoot = forwardRef<HTMLDivElement, CardProps>(
   ({ className, ...props }, ref) => (
     <div ref={ref} className={CardStyles.Root({ className })} {...props} />
   ),
 );
 CardRoot.displayName = "Card";
 
-const CardHeader = forwardRef<
+export const CardHeader = forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -41,7 +41,7 @@ const CardHeader = forwardRef<
 ));
 CardHeader.displayName = "CardHeader";
 
-const CardTitle = forwardRef<
+export const CardTitle = forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
 >(({ className, children, ...props }, ref) => (
@@ -51,7 +51,7 @@ const CardTitle = forwardRef<
 ));
 CardTitle.displayName = "CardTitle";
 
-const CardDescription = forwardRef<
+export const CardDescription = forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
@@ -59,7 +59,7 @@ const CardDescription = forwardRef<
 ));
 CardDescription.displayName = "CardDescription";
 
-const CardContent = forwardRef<
+export const CardContent = forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -67,7 +67,7 @@ const CardContent = forwardRef<
 ));
 CardContent.displayName = "CardContent";
 
-const CardFooter = forwardRef<
+export const CardFooter = forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (

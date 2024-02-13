@@ -23,7 +23,7 @@ export type AvatarProps = React.ComponentPropsWithoutRef<
   typeof AvatarPrimitive.Root
 >;
 
-const Root = forwardRef<
+export const AvatarRoot = forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
   AvatarProps
 >(({ className, ...props }, ref) => (
@@ -33,13 +33,13 @@ const Root = forwardRef<
     {...props}
   />
 ));
-Root.displayName = "Avatar";
+AvatarRoot.displayName = "Avatar";
 
 export type AvatarImageProps = React.ComponentPropsWithoutRef<
   typeof AvatarPrimitive.Image
 >;
 
-const Image = forwardRef<
+export const AvatarImage = forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
   AvatarImageProps
 >(({ className, ...props }, ref) => (
@@ -49,13 +49,13 @@ const Image = forwardRef<
     {...props}
   />
 ));
-Image.displayName = "Avatar.Image";
+AvatarImage.displayName = "Avatar.Image";
 
 export type AvatarFallbackProps = React.ComponentPropsWithoutRef<
   typeof AvatarPrimitive.Fallback
 >;
 
-const Fallback = forwardRef<
+export const AvatarFallback = forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>,
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>
 >(({ className, ...props }, ref) => (
@@ -65,9 +65,9 @@ const Fallback = forwardRef<
     {...props}
   />
 ));
-Fallback.displayName = "Avatar.Fallback";
+AvatarFallback.displayName = "Avatar.Fallback";
 
-export const Avatar = Object.assign(Root, {
-  Image,
-  Fallback,
+export const Avatar = Object.assign(AvatarRoot, {
+  Image: AvatarImage,
+  Fallback: AvatarFallback,
 });

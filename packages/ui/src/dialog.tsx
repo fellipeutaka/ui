@@ -45,21 +45,21 @@ export const DialogStyles = {
   }),
 };
 
-const DialogRoot = DialogPrimitive.Root;
+export const DialogRoot = DialogPrimitive.Root;
 
 DialogRoot.displayName = "Dialog";
 
-const DialogTrigger = DialogPrimitive.Trigger;
+export const DialogTrigger = DialogPrimitive.Trigger;
 
 DialogTrigger.displayName = "Dialog.Trigger";
 
-const DialogPortal = DialogPrimitive.Portal;
+export const DialogPortal = DialogPrimitive.Portal;
 
 export const DialogClose = DialogPrimitive.Close;
 
 DialogClose.displayName = "Dialog.Close";
 
-const DialogOverlay = forwardRef<
+export const DialogOverlay = forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
@@ -71,7 +71,7 @@ const DialogOverlay = forwardRef<
 ));
 DialogOverlay.displayName = "Dialog.Overlay";
 
-const DialogContent = forwardRef<
+export const DialogContent = forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
@@ -94,7 +94,7 @@ const DialogContent = forwardRef<
 ));
 DialogContent.displayName = "Dialog.Content";
 
-const DialogHeader = ({
+export const DialogHeader = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -102,7 +102,7 @@ const DialogHeader = ({
 );
 DialogHeader.displayName = "Dialog.Header";
 
-const DialogFooter = ({
+export const DialogFooter = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -110,7 +110,7 @@ const DialogFooter = ({
 );
 DialogFooter.displayName = "Dialog.Footer";
 
-const DialogTitle = forwardRef<
+export const DialogTitle = forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
 >(({ className, ...props }, ref) => (
@@ -122,7 +122,7 @@ const DialogTitle = forwardRef<
 ));
 DialogTitle.displayName = "Dialog.Title";
 
-const DialogDescription = forwardRef<
+export const DialogDescription = forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (

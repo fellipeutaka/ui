@@ -35,64 +35,64 @@ export const TableStyles = {
 
 export type TableProps = React.ComponentPropsWithoutRef<"table">;
 
-const Root = forwardRef<HTMLTableElement, TableProps>(
+export const TableRoot = forwardRef<HTMLTableElement, TableProps>(
   ({ className, ...props }, ref) => (
     <div className="relative w-full overflow-auto">
       <table ref={ref} className={TableStyles.Root({ className })} {...props} />
     </div>
   ),
 );
-Root.displayName = "Table";
+TableRoot.displayName = "Table";
 
-const Header = forwardRef<
+export const TableHeader = forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <thead ref={ref} className={TableStyles.Header({ className })} {...props} />
 ));
-Header.displayName = "Table.Header";
+TableHeader.displayName = "Table.Header";
 
-const Body = forwardRef<
+export const TableBody = forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <tbody ref={ref} className={TableStyles.Body({ className })} {...props} />
 ));
-Body.displayName = "Table.Body";
+TableBody.displayName = "Table.Body";
 
-const Footer = forwardRef<
+export const TableFooter = forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
   <tfoot ref={ref} className={TableStyles.Footer({ className })} {...props} />
 ));
-Footer.displayName = "Table.Footer";
+TableFooter.displayName = "Table.Footer";
 
-const Row = forwardRef<
+export const TableRow = forwardRef<
   HTMLTableRowElement,
   React.HTMLAttributes<HTMLTableRowElement>
 >(({ className, ...props }, ref) => (
   <tr ref={ref} className={TableStyles.Row({ className })} {...props} />
 ));
-Row.displayName = "Table.Row";
+TableRow.displayName = "Table.Row";
 
-const Head = forwardRef<
+export const TableHead = forwardRef<
   HTMLTableCellElement,
   React.ThHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
   <th ref={ref} className={TableStyles.Head({ className })} {...props} />
 ));
-Head.displayName = "Table.Head";
+TableHead.displayName = "Table.Head";
 
-const Cell = forwardRef<
+export const TableCell = forwardRef<
   HTMLTableCellElement,
   React.TdHTMLAttributes<HTMLTableCellElement>
 >(({ className, ...props }, ref) => (
   <td ref={ref} className={TableStyles.Cell({ className })} {...props} />
 ));
-Cell.displayName = "Table.Cell";
+TableCell.displayName = "Table.Cell";
 
-const Caption = forwardRef<
+export const TableCaption = forwardRef<
   HTMLTableCaptionElement,
   React.HTMLAttributes<HTMLTableCaptionElement>
 >(({ className, ...props }, ref) => (
@@ -102,14 +102,14 @@ const Caption = forwardRef<
     {...props}
   />
 ));
-Caption.displayName = "Table.Caption";
+TableCaption.displayName = "Table.Caption";
 
-export const Table = Object.assign(Root, {
-  Header,
-  Body,
-  Footer,
-  Row,
-  Head,
-  Cell,
-  Caption,
+export const Table = Object.assign(TableRoot, {
+  Header: TableHeader,
+  Body: TableBody,
+  Footer: TableFooter,
+  Row: TableRow,
+  Head: TableHead,
+  Cell: TableCell,
+  Caption: TableCaption,
 });

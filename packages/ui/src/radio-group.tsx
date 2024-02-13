@@ -21,7 +21,7 @@ export const RadioGroupStyles = {
 
 export type RadioGroupProps = React.ComponentPropsWithoutRef<typeof Root>;
 
-const RadioGroupRoot = forwardRef<
+export const RadioGroupRoot = forwardRef<
   React.ElementRef<typeof Root>,
   RadioGroupProps
 >(({ className, ...props }, ref) => {
@@ -40,7 +40,7 @@ export type RadioGroupItemProps = Omit<
   "children"
 >;
 
-const RadioGroupItem = forwardRef<
+export const RadioGroupItem = forwardRef<
   React.ElementRef<typeof Item>,
   RadioGroupItemProps
 >(({ className, ...props }, ref) => {

@@ -70,17 +70,17 @@ export const SelectStyles = {
 };
 
 export type SelectRootProps = SelectPrimitive.SelectGroupProps;
-const SelectRoot = SelectPrimitive.Root;
+export const SelectRoot = SelectPrimitive.Root;
 
 SelectRoot.displayName = "Select";
 
 export type SelectGroupProps = SelectPrimitive.SelectGroupProps;
-const SelectGroup = SelectPrimitive.Group;
+export const SelectGroup = SelectPrimitive.Group;
 
 SelectGroup.displayName = "Select.Group";
 
 export type SelectValueProps = SelectPrimitive.SelectValueProps;
-const SelectValue = SelectPrimitive.Value;
+export const SelectValue = SelectPrimitive.Value;
 
 SelectValue.displayName = "Select.Value";
 
@@ -91,7 +91,7 @@ export type SelectTriggerProps = Omit<
   placeholder: string;
 };
 
-const SelectTrigger = forwardRef<
+export const SelectTrigger = forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   SelectTriggerProps
 >(({ className, placeholder, ...props }, ref) => (
@@ -112,7 +112,7 @@ SelectTrigger.displayName = "Select.Trigger";
 
 export type SelectContentProps = SelectPrimitive.SelectContentProps;
 
-const SelectContent = forwardRef<
+export const SelectContent = forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
 >(({ className, children, position = "popper", ...props }, ref) => (
@@ -144,7 +144,7 @@ SelectContent.displayName = "Select.Content";
 
 export type SelectLabelProps = SelectPrimitive.SelectLabelProps;
 
-const SelectLabel = forwardRef<
+export const SelectLabel = forwardRef<
   React.ElementRef<typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>
 >(({ className, ...props }, ref) => (
@@ -158,7 +158,7 @@ SelectLabel.displayName = "Select.Label";
 
 export type SelectItemProps = SelectPrimitive.SelectItemProps;
 
-const SelectItem = forwardRef<
+export const SelectItem = forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
 >(({ className, children, ...props }, ref) => (
@@ -180,7 +180,7 @@ SelectItem.displayName = "Select.Item";
 
 export type SelectSeparatorProps = SelectPrimitive.SelectSeparatorProps;
 
-const SelectSeparator = forwardRef<
+export const SelectSeparator = forwardRef<
   React.ElementRef<typeof SelectPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
 >(({ className, ...props }, ref) => (
